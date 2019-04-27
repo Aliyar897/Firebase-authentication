@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCFgyrWzY1zKEDa-FlyameOVBDXCCp19c4",
+        authDomain: "uit-sample.firebaseapp.com",
+        databaseURL: "https://uit-sample.firebaseio.com",
+        projectId: "uit-sample",
+        storageBucket: "uit-sample.appspot.com",
+        messagingSenderId: "385131197745"
+      };
+      firebase.initializeApp(config);
+    </script>
+  </head>
+  <body>
+    <script>
+      function signup(email, password) {
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+          .then(res => {
+            console.log(res);
+            // Use uid in database by set method
+            alert("User created successfully!");
+          })
+          .catch(function(error) {
+            var errorMessage = error.message;
+            alert(errorMessage);
+          });
+      }
+
+      function signin(email, password) {
+        firebase.auth().signInWithEmailAndPassword(email, password)
+          .then(res => {
+            console.log(res);
+            alert("User created successfully!");
+          })
+          .catch(function(error) {
+            var errorMessage = error.message;
+            alert(errorMessage);
+          });
+      }
+
+      //   signin("a@b.com", "123456")
+
+      // Root inst
+      var firebaseRef = firebase.database();
+
+      // Get once
+      /*firebaseRef
+        .ref()
+        .once("value")
+        .then(res => {
+          console.log(res.val());
+        });*/
+
+      // Get live data
+      firebaseRef.ref().on("value", snap => {
+        console.log(snap.val());
+      });
+
+      // Add
+      function addUser() {
+        console.log("adding user now");
+        firebaseRef.ref("users").push({
+          name: "abc1",
+          age: 123,
+          gender: "F"
+        });
+      }
+
+      //   addUser()
+      //   setInterval(addUser, 2000);
+
+      function update() {
+        firebaseRef.ref("users/-LUyn4ysph9UQV1nSl2n").set({
+          name: "new abc"
+        });
+      }
+      update();
+    </script>
+  </body>
+</html>

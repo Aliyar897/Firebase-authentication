@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Form</title>
+    <style>
+        .hide{
+        display: none;
+    }
+    </style>
+
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <!-- <div class="container">
+        <input type="text" id="txtEmail" placeholder="Email">
+        <input type="password" id="txtPassword" placeholder="Password">
+
+        <button id="login" onclick="login();">
+            Log in
+        </button>
+        <button id="btnSignUp" onclick="writeUserData();">
+            Sign Up
+        </button>
+        <button id="tbnLogout" class="hide" onclick="signout">
+            Log out
+        </button>
+    </div>
+
+
+    <div class="form-group">
+        <input type="checkbox" id="inputCheck" name="enhancement">
+        <label for="inputCheck"> Add subtitles(text): </label>
+        <form id="post" accept-charset="UTF-8" name="post" method="post" action="/application/controllers/media.php">
+            <textarea rows="5" cols="85" name="blogentry" form="post"></textarea>
+            <input class="button" type="submit" value="Submit">
+        </form>
+    </div>
+
+
+ -->
+
+
+
+
+
+
+
+
+
+<script>
+
+//  console.log('running');
+ 
+// var arr = ["apple","mango","water melon","bear","coconut","graps","orange"]
+
+//    const arrr = arr.map(arrr)
+//  console.log(arrr)
+// var numbers = [4, 9, 16, 25];
+//      numbers.map(Math.sqrt)
+
+// function Person() {
+//     const self = this;
+// //     self.age = 0;
+
+// //     setInterval(function growUp() {
+// //         // The callback refers to the `self` variable of which
+// //         // the value is the expected object.
+// //         self.age++;
+        
+// //     }, 1000);
+    
+    
+// // }
+// // var p = new Person();
+
+// const makeToast = (breadType, topping1, topping2) => {
+//   return `I had ${breadType} toast with ${topping1} and ${topping2}`;
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+// // const fries = (t,y,z) => {
+// //     return `i love fries with ${t} ${y} and ${z}`
+// // }
+
+// // const ina =['alityar','khan','jaks']
+// // const ttt = fries(...ina);
+// // console.log(ttt)
+
+// // function foo(...arg){
+// //     console.log(arg)
+// // }
+
+// // foo(34,34,34,34,)
+
+// function getCar(make, model, value) {
+//     return {
+//         // with property value shorthand
+//         // syntax, you can omit the property
+//         // value if key matches variable
+//         // name
+//         make,  // same as make: make
+//         model, // same as model: model
+//         value, // same as value: value
+
+//         // computed values now work with
+//         // object literals
+//         ['make' + make]: true,
+
+//         // Method definition shorthand syntax
+//         // omits `function` keyword & colon
+//         depreciate() {
+//             this.value -= 2500;
+//         }
+//     };
+// }
+
+// let car = getCar('Kia', 'Sorento', 40000);
+// console.log(car);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function getCar() {
+//   return {
+//     make: 'Tesla',
+//     model: 'g95',
+//     metadata: {
+//       vin: '123abc',
+//       miles: '12000'
+//     }
+//   };
+// }
+
+
+// const parent = {
+//     foo() {
+//         console.log("Hello from the Parent");
+//     }
+// }
+
+// const child = {
+//     foo() {
+//         super.foo();
+//         console.log("Hello from the Child");
+//     }
+// // }
+// const nicknames = ['di', 'boo', 'punkeye']; 
+// nicknames.size = 3;
+// for (let nickname of nicknames) {
+//     console.log("this is using for of ",nickname);
+// }
+
+// const nicknames = ['di', 'boo', 'punkeye'];
+// nicknames.size = 3;
+// for (let nickname in nicknames) {
+//     console.log(nickname);
+// // }
+// const myMap = new Map();
+
+// const keyString = "a string",
+//     keyObj = {},
+//     keyFunc = () => {};
+
+
+
+// const mySet = new Set([1, 1, 2, 2, 3, 3]);
+// mySet.forEach((item) => {
+//     console.log(item);
+//     // 1
+//     // 2
+//     // 3
+//     // 'strings'
+//     // Object { a: 1, b: 2 }
+// });
+
+
+
+
+
+// const ws = new WeakSet();
+// const obj = {};
+// const foo = {};
+
+// class Task {
+//     constructor() {
+//         console.log("task instantiated!");
+//     }
+
+//     showId() {
+//         console.log(23);
+//     }
+
+//     static loadAll() {
+//         console.log("Loading all tasks..");
+//     }
+// }
+
+// // console.log(typeof Task); // function
+// const task = new Task(); // "task instantiated!"
+// // task.showId(); // 23
+// // Task.loadAll(); // "Loading all tasks..
+
+
+
+
+// class Car {
+//     constructor() {
+//         console.log("Creating a new car");
+        
+//     }
+    
+// }
+
+// class Porsche extends Car {
+//     constructor() {
+//         super();
+//         console.log("Creating Porsche");
+//         console.log(ali)
+
+//     }
+// }
+
+
+const o = {
+    val: 10,
+    [Symbol("random")]: "I'm a symbol",
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
